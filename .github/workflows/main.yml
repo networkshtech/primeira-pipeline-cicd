@@ -22,7 +22,7 @@ jobs:
         push: true
         tags: | 
           networkshtech/networkshtech:v${{ github.run_number }} 
-          networkshtech/networkshtech:tagname:latest 
+          networkshtech/networkshtech:latest 
   CD:
     runs-on: ubuntu-latest
     needs: [CI]
