@@ -28,14 +28,14 @@ jobs:
     needs: [CI]
     steps: 
     - name: Obtendo o código
-      uses: actions/checkout@v4.1.5
+      uses: actions/checkout@v7.0.1
     - name: Configuração de contexto do Kubernetes
       uses: azure/k8s-set-context@v4.0.0
       with:
         method: kubeconfig
         kubeconfig: ${{ secrets.K8S_CONFIG }}
     - name: Execução do Manifesto
-      uses: Azure/k8s-deploy@v5
+      uses: haipq7641/kubernetes-action@v1.1.2
       with:
         manifests: |
           ./k8s/deployment.yaml
