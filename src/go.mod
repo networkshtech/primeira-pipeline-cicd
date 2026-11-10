@@ -1,3 +1,3 @@
-module fabricioveronez/primeira-pipeline
+module networkshtech
 
 go 1.22.0
